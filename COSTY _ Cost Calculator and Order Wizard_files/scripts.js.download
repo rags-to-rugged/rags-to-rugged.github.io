@@ -470,6 +470,7 @@
 		var webType = $('#optionGroup1  option:selected').val();
 		if ( webType==="0" || webType=== "6000"){
 			$('#optionGroup2').css('display', 'None');
+			$('#optionGroup2List').val(6000).niceSelect('update');
 		}else{
 			$('#optionGroup2').css('display', 'Flex');
 		}
