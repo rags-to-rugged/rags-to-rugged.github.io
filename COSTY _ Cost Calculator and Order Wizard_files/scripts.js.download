@@ -286,9 +286,9 @@
 		subSum1 = (selectedItem1Price * 1) ;
 
 		// Update order summary with optionGroup1 details
-		if ((selectedItem1Title != chooseItemText) && (actualQty1 != 0)) {
+		if (selectedItem1Title != chooseItemText) {
 
-			$('#optionGroup1Sum').html('<a href="javascript:;" id="optionGroup1SumReset"><i class="fa fa-times-circle"></i></a> ' + selectedItem1Title + ' x ' + actualQty1 + '<span class="price">' + subSum1.toFixed(2) + '</span>');
+			$('#optionGroup1Sum').html('<a href="javascript:;" id="optionGroup1SumReset"><i class="fa fa-check"></i></a> ' + selectedItem1Title  + '<span class="price">' + subSum1.toFixed(2) + '</span>');
 			formatItemPrice();
 
 		} else { // If optionGroup slider is 0
@@ -301,9 +301,9 @@
 		subSum2 = (selectedItem2Price * 1);
 
 		// Update order summary with optionGroup1 details
-		if ((selectedItem2Title != chooseItemText) && (actualQty2 != 0)) {
+		if (selectedItem2Title != chooseItemText) {
 
-			$('#optionGroup2Sum').html('<a href="javascript:;" id="optionGroup2SumReset"><i class="fa fa-times-circle"></i></a> ' + selectedItem2Title + ' x ' + actualQty2 + '<span class="price">' + subSum2.toFixed(2) + '</span>');
+			$('#optionGroup2Sum').html('<a href="javascript:;" id="optionGroup2SumReset"><i class="fa fa-check"></i></a> ' + selectedItem2Title +  '<span class="price">' + subSum2.toFixed(2) + '</span>');
 			formatItemPrice();
 
 		} else { // If optionGroup slider is 0
@@ -316,9 +316,9 @@
 		subSum3 = (selectedItem3Price * 1) ;
 
 		// Update order summary with optionGroup3 details
-		if ((selectedItem3Title != chooseItemText) && (actualQty3 != 0)) {
+		if (selectedItem3Title != chooseItemText) {
 
-			$('#optionGroup3Sum').html('<a href="javascript:;" id="optionGroup3SumReset"><i class="fa fa-times-circle"></i></a> ' + selectedItem3Title + ' x ' + actualQty3 + '<span class="price">' + subSum3.toFixed(2) + '</span>');
+			$('#optionGroup3Sum').html('<a href="javascript:;" id="optionGroup3SumReset"><i class="fa fa-check"></i></a> ' + selectedItem3Title +  '<span class="price">' + subSum3.toFixed(2) + '</span>');
 			formatItemPrice();
 
 		} else { // If optionGroup slider is 0
@@ -333,7 +333,7 @@
 		if (extraOption1IsChecked) {
 
 			extraOption1Price = extraOption1Price * 1;
-			$('#extraOption1Sum').html('<a href="javascript:;" id="extraOption1SumReset"><i class="fa fa-times-circle"></i></a> ' + extraOption1Title + '<span class="price">' + extraOption1Price.toFixed(2) + '</span>');
+			$('#extraOption1Sum').html('<a href="javascript:;" id="extraOption1SumReset"><i class="fa fa-check"></i></a> ' + extraOption1Title + '<span class="price">' + extraOption1Price.toFixed(2) + '</span>');
 			formatItemPrice();
 
 		} else { // If option in not checked			
@@ -351,7 +351,7 @@
 		if (extraOption2IsChecked) {
 
 			extraOption2Price = extraOption2Price * 1;
-			$('#extraOption2Sum').html('<a href="javascript:;" id="extraOption2SumReset"><i class="fa fa-times-circle"></i></a> ' + extraOption2Title + '<span class="price">' + extraOption2Price.toFixed(2) + '</span>');
+			$('#extraOption2Sum').html('<a href="javascript:;" id="extraOption2SumReset"><i class="fa fa-check"></i></a> ' + extraOption2Title + '<span class="price">' + extraOption2Price.toFixed(2) + '</span>');
 			formatItemPrice();
 
 		} else { // If option in not checked			
