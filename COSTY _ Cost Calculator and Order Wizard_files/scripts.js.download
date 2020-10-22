@@ -15,6 +15,20 @@
 		$hero.find('.btn-1').addClass('fadeIn animated');
 		$hero_v.find('.h3, p, form').addClass('fadeInUp animated');
 		$(window).scroll();
+		var webType = $('#optionGroup1  option:selected').val();
+		if ( webType==="0" || webType=== "6000"){
+			$('#optionGroup2').css('display', 'None');
+		}else{
+			$('#optionGroup2').css('display', 'flex');
+		}
+		
+		showSelectedItemPrice('#optionGroup1');
+		updateSummary();
+		saveState();
+		reValidateTotal();
+		$('#sus1').text();
+		$('#sus2').text();
+		$('#sus3').text();
 	})
 
 	// =====================================================
@@ -70,7 +84,7 @@
 		navbar: {
 			title: 'MENU'
 		},
-		navbars: [{ position: 'bottom', content: ['<a href="#">Â© 2020 Costy</a>'] }]
+		navbars: [{ position: 'bottom', content: ['<a href="#">Ã‚Â© 2020 Costy</a>'] }]
 	},
 		{
 			// configuration
@@ -409,18 +423,18 @@
 	function resetDropdown(optionGroupListName) {
 
 		if (optionGroupListName == 'all') {
-			$('#optionGroup1List').val(0).niceSelect('update');
-			$('#optionGroup2List').val(0).niceSelect('update');
-			$('#optionGroup3List').val(0).niceSelect('update');
+			$('#optionGroup1List').val(6000).niceSelect('update');
+			$('#optionGroup2List').val(6000).niceSelect('update');
+			$('#optionGroup3List').val(2500).niceSelect('update');
 		}
 		if (optionGroupListName == 'optionGroup1List') {
-			$('#optionGroup1List').val(0).niceSelect('update');
+			$('#optionGroup1List').val(6000).niceSelect('update');
 		}
 		if (optionGroupListName == 'optionGroup2List') {
-			$('#optionGroup2List').val(0).niceSelect('update');
+			$('#optionGroup2List').val(6000).niceSelect('update');
 		}
 		if (optionGroupListName == 'optionGroup3List') {
-			$('#optionGroup3List').val(0).niceSelect('update');
+			$('#optionGroup3List').val(25000).niceSelect('update');
 		}
 
 	}
@@ -453,6 +467,13 @@
 
 	// When optionGroup1List is changed
 	$('#optionGroup1List').on('change', function () {
+		var webType = $('#optionGroup1  option:selected').val();
+		if ( webType==="0" || webType=== "6000"){
+			$('#optionGroup2').css('display', 'None');
+		}else{
+			$('#optionGroup2').css('display', 'Flex');
+		}
+		$('#sus1').text("₹"+$('#optionGroup1  option:selected').val());
 		showSelectedItemPrice('#optionGroup1');
 		updateSummary();
 		saveState();
@@ -461,6 +482,7 @@
 
 	// When optionGroup2List is changed
 	$('#optionGroup2List').on('change', function () {
+	$('#sus2').text("₹"+$('#optionGroup2  option:selected').val());
 		showSelectedItemPrice('#optionGroup2');
 		updateSummary();
 		saveState();
@@ -469,6 +491,7 @@
 
 	// When optionGroup3List is changed
 	$('#optionGroup3List').on('change', function () {
+	$('#sus3').text("₹"+$('#optionGroup3  option:selected').val());
 		showSelectedItemPrice('#optionGroup3');
 		updateSummary();
 		saveState();
@@ -544,7 +567,14 @@
 		resetCheckbox('all');
 		updateSummary();
 		showItemPrices('all');
+		var webType = $('#optionGroup1  option:selected').val();
+		if ( webType==="0" || webType=== "6000"){
+			$('#optionGroup2').css('display', 'None');
+		}else{
+			$('#optionGroup2').css('display', 'flex');
+		}
 		scrollToTop();
+		
 	});
 
 	// =====================================================

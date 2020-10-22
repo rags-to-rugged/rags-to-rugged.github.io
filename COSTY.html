@@ -59,6 +59,7 @@
 	clear: both;
 }
 </style>
+
 </head>
 
 <body style="transform: none;">
@@ -95,9 +96,7 @@
 											<div class="ribbon-left">
 												<span class="left">Base Plan</span>
 											</div>
-											<div class="price-box">
-												<sup>₹</sup>6000
-											</div>
+											<div  id="sus1" class="price-box">₹6000</div>
 											<div class="option-box-header">
 												<h3>Web design</h3>
 												<p>Free .com domain for your-awesome-site.com</p>
@@ -108,26 +107,25 @@
 													id="option1Price" name="option1Price" value="0"> <select
 													id="optionGroup1List" class="wide price-list"
 													name="optionGroup1List" style="display: none;">
-													<option value="0">Select</option>
-													<option value="6000">Single page website</option>
-													<option value="8000">E-commerse</option>
-													<option value="10000">Custom</option>
+													<!-- 													<option value="0">Select</option> -->
+													<option value="6000">Static website</option>
+													<option value="8000">E-commerce</option>
+													<option value="10000">Dynamic website</option>
 												</select>
 												<div class="nice-select wide price-list" tabindex="0">
-													<span class="current">Select</span>
+													<span class="current">Static website</span>
 													<ul class="list">
-														<li data-value="0" class="option selected">Select</li>
-														<li data-value="6000" class="option">Static website</li>
-														<li data-value="8000" class="option">E-commerse</li>
+														<!-- 														<li data-value="0" class="option selected">Select</li> -->
+														<li data-value="6000" class="option selected">Static
+															website</li>
+														<li data-value="8000" class="option">E-commerce</li>
 														<li data-value="10000" class="option">Dynamic website</li>
 													</ul>
 												</div>
 											</div>
 										</div>
 										<div id="optionGroup2" class="row option-box">
-											<div class="price-box">
-												<sup>₹</sup>6000
-											</div>
+											<div  id="sus2" class="price-box">₹6000</div>
 											<div class="option-box-header">
 												<h3>Number of pages</h3>
 												<p>Free SSL certificate for your-awesome-site.com</p>
@@ -138,18 +136,18 @@
 													id="option2Price" name="option2Price" value="0"> <select
 													id="optionGroup2List" class="wide price-list"
 													name="optionGroup2List" style="display: none;">
-													<option value="0">Select</option>
+													<!-- 													<option value="0">Select</option> -->
 													<option value="6000">Single page website</option>
 													<option value="10000">less than 5-10 pages</option>
 													<option value="15000">More than 10 pages</option>
 												</select>
 
 												<div class="nice-select wide price-list" tabindex="0">
-													<span class="current">Select</span>
+													<span class="current">Single page website</span>
 													<ul class="list">
-														<li data-value="0" class="option selected">Select</li>
-														<li data-value="6000" class="option">Single page
-															website</li>
+														<!-- 														<li data-value="0" class="option selected">Select</li> -->
+														<li data-value="6000" class="option selected">Single page website</li>
+															
 														<li data-value="10000" class="option">less than 5-10
 															pages</li>
 														<li data-value="15000" class="option">More than 10
@@ -159,9 +157,7 @@
 											</div>
 										</div>
 										<div id="optionGroup3" class="row option-box">
-											<div class="price-box">
-												<sup>₹</sup>2500
-											</div>
+											<div  id="sus3" class="price-box">₹2500</div>
 											<div class="option-box-header">
 												<h3>Hosting</h3>
 												<p>Free ultra-fast content delivery Network (CDN)</p>
@@ -172,16 +168,17 @@
 													id="option3Price" name="option3Price" value="0"> <select
 													id="optionGroup3List" class="wide price-list"
 													name="optionGroup3List" style="display: none;">
-													<option value="0">Select</option>
+													<!-- 													<option value="0">Select</option> -->
 													<option value="2500">30 GB storage</option>
 													<option value="5000">100 GB Storage</option>
 													<option value="8000">Unlimited Space</option>
 												</select>
 												<div class="nice-select wide price-list" tabindex="0">
-													<span class="current">Select</span>
+													<span class="current">30 GB storage</span>
 													<ul class="list">
-														<li data-value="0" class="option selected">Select</li>
-														<li data-value="2500" class="option">30 GB storage</li>
+														<!-- 														<li data-value="0" class="option selected">Select</li> -->
+														<li data-value="2500" class="option selected">30 GB
+															storage</li>
 														<li data-value="5000" class="option">100 GB Storage</li>
 														<li data-value="8000" class="option">Unlimited Space</li>
 
@@ -190,9 +187,7 @@
 											</div>
 										</div>
 										<div id="extraOptionGroup1" class="row option-box">
-											<div class="price-box">
-												<sup>₹</sup>5000
-											</div>
+											<div  class="price-box">₹5000</div>
 											<div class="option-box-header">
 												<h3>Email and Chat Service</h3>
 												<p>Free email addressess with @your-awesome-site.com</p>
@@ -211,9 +206,7 @@
 											</div>
 										</div>
 										<div id="extraOptionGroup2" class="row option-box">
-											<div class="price-box">
-												<sup>₹</sup>2000
-											</div>
+											<div class="price-box">₹2000</div>
 											<div class="option-box-header">
 												<h3>Google Analytics</h3>
 												<p>Free Social media setup and Map submissions.</p>
@@ -322,7 +315,7 @@
 															data-parsley-empty-order="" disabled="">
 													</div>
 												</div>
-												
+
 												<div class="row total-container">
 													<div class="col-6 p-0">
 														<input type="text" id="maintenance" class="summaryInput"
@@ -331,31 +324,32 @@
 													<div class="col-6 p-0">
 														<input type="text" id="baseMaintenanceCost"
 															class="summaryInput" name="baseMaintenanceCost"
-															value="₹ 3000" data-parsley-errors-container="#totalError"
+															value="₹ 3000"
+															data-parsley-errors-container="#totalError"
 															data-parsley-empty-order="" disabled="">
 													</div>
 												</div>
 												<p>Free maintenance for first year. The Cost includes
-															Domain renewal and hosting</p>
+													Domain renewal and hosting</p>
 												<div id="totalError"></div>
 											</div>
 										</div>
-<!-- 										<div class="row"> -->
-<!-- 											<div class="col-md-12"> -->
-<!-- 												<div class="form-group"> -->
-<!-- 													<input type="checkbox" id="cbx" class="inp-cbx" -->
-<!-- 														name="terms" value="yes" required="" -->
-<!-- 														data-parsley-multiple="terms"> <label -->
-<!-- 														class="cbx terms" for="cbx"> <span> <svg -->
-<!-- 																width="12px" height="10px" viewBox="0 0 12 10"> -->
-<!-- 															<polyline points="1.5 6 4.5 9 10.5 1"></polyline> -->
-<!-- 														</svg> -->
-<!-- 													</span> <span>Accept<a class="terms-link" target="_blank">Terms</a>. -->
-<!-- 													</span> -->
-<!-- 													</label> -->
-<!-- 												</div> -->
-<!-- 											</div> -->
-<!-- 										</div> -->
+										<!-- 										<div class="row"> -->
+										<!-- 											<div class="col-md-12"> -->
+										<!-- 												<div class="form-group"> -->
+										<!-- 													<input type="checkbox" id="cbx" class="inp-cbx" -->
+										<!-- 														name="terms" value="yes" required="" -->
+										<!-- 														data-parsley-multiple="terms"> <label -->
+										<!-- 														class="cbx terms" for="cbx"> <span> <svg -->
+										<!-- 																width="12px" height="10px" viewBox="0 0 12 10"> -->
+										<!-- 															<polyline points="1.5 6 4.5 9 10.5 1"></polyline> -->
+										<!-- 														</svg> -->
+										<!-- 													</span> <span>Accept<a class="terms-link" target="_blank">Terms</a>. -->
+										<!-- 													</span> -->
+										<!-- 													</label> -->
+										<!-- 												</div> -->
+										<!-- 											</div> -->
+										<!-- 										</div> -->
 										<!-- 										<div class="row"> -->
 										<!-- 											<div class="col-lg-12"> -->
 										<!-- 												<button type="submit" name="submit" class="btn-form-func"> -->
